@@ -1,11 +1,11 @@
-package com.landsharkgames.zenkoi2.andr.viewmodel
+package com.supersolid.cookandme.viewmodel
 
 import android.app.Application
 import androidx.compose.runtime.mutableStateMapOf
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
-import com.landsharkgames.zenkoi2.andr.data.Workout
-import com.landsharkgames.zenkoi2.andr.data.WorkoutRepository
+import com.supersolid.cookandme.data.Workout
+import com.supersolid.cookandme.data.WorkoutRepository
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow

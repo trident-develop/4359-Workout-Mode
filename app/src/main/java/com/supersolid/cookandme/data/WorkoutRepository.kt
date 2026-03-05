@@ -1,4 +1,4 @@
-package com.landsharkgames.zenkoi2.andr.data
+package com.supersolid.cookandme.data
 
 import android.content.Context
 import androidx.core.content.edit

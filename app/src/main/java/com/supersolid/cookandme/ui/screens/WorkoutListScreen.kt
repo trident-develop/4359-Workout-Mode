@@ -1,4 +1,4 @@
-package com.landsharkgames.zenkoi2.andr.ui.screens
+package com.supersolid.cookandme.ui.screens
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -22,17 +22,17 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.landsharkgames.zenkoi2.andr.data.Workout
-import com.landsharkgames.zenkoi2.andr.ui.theme.BeigeCard
-import com.landsharkgames.zenkoi2.andr.ui.theme.IntensityHigh
-import com.landsharkgames.zenkoi2.andr.ui.theme.IntensityHighContainer
-import com.landsharkgames.zenkoi2.andr.ui.theme.IntensityLow
-import com.landsharkgames.zenkoi2.andr.ui.theme.IntensityLowContainer
-import com.landsharkgames.zenkoi2.andr.ui.theme.IntensityMedium
-import com.landsharkgames.zenkoi2.andr.ui.theme.IntensityMediumContainer
-import com.landsharkgames.zenkoi2.andr.ui.theme.TextMedium
-import com.landsharkgames.zenkoi2.andr.ui.theme.WarmBrown
-import com.landsharkgames.zenkoi2.andr.viewmodel.WorkoutViewModel
+import com.supersolid.cookandme.data.Workout
+import com.supersolid.cookandme.ui.theme.BeigeCard
+import com.supersolid.cookandme.ui.theme.IntensityHigh
+import com.supersolid.cookandme.ui.theme.IntensityHighContainer
+import com.supersolid.cookandme.ui.theme.IntensityLow
+import com.supersolid.cookandme.ui.theme.IntensityLowContainer
+import com.supersolid.cookandme.ui.theme.IntensityMedium
+import com.supersolid.cookandme.ui.theme.IntensityMediumContainer
+import com.supersolid.cookandme.ui.theme.TextMedium
+import com.supersolid.cookandme.ui.theme.WarmBrown
+import com.supersolid.cookandme.viewmodel.WorkoutViewModel
 
 @Composable
 fun WorkoutListScreen(

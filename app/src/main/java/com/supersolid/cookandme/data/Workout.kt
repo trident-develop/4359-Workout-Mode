@@ -1,4 +1,4 @@
-package com.landsharkgames.zenkoi2.andr.data
+package com.supersolid.cookandme.data
 
 data class Workout(
     val id: Int,

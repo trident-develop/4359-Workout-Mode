@@ -1,4 +1,4 @@
-package com.landsharkgames.zenkoi2.andr.ui.screens
+package com.supersolid.cookandme.ui.screens
 
 import androidx.compose.animation.core.FastOutSlowInEasing
 import androidx.compose.animation.core.RepeatMode
@@ -28,7 +28,7 @@ import androidx.compose.ui.draw.scale
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.compose.rememberNavController
-import com.landsharkgames.zenkoi2.andr.ui.theme.WarmBrown
+import com.supersolid.cookandme.ui.theme.WarmBrown
 import kotlinx.coroutines.delay
 
 @Composable

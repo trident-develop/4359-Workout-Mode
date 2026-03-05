@@ -1,9 +1,6 @@
-package com.landsharkgames.zenkoi2.andr.ui.screens
+package com.supersolid.cookandme.ui.screens
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.BarChart
@@ -28,12 +25,12 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
-import com.landsharkgames.zenkoi2.andr.ui.theme.BeigeBackground
-import com.landsharkgames.zenkoi2.andr.ui.theme.BeigeCard
-import com.landsharkgames.zenkoi2.andr.ui.theme.BeigeDivider
-import com.landsharkgames.zenkoi2.andr.ui.theme.TextMedium
-import com.landsharkgames.zenkoi2.andr.ui.theme.WarmBrown
-import com.landsharkgames.zenkoi2.andr.viewmodel.WorkoutViewModel
+import com.supersolid.cookandme.ui.theme.BeigeBackground
+import com.supersolid.cookandme.ui.theme.BeigeCard
+import com.supersolid.cookandme.ui.theme.BeigeDivider
+import com.supersolid.cookandme.ui.theme.TextMedium
+import com.supersolid.cookandme.ui.theme.WarmBrown
+import com.supersolid.cookandme.viewmodel.WorkoutViewModel
 
 private data class TabItem(
     val label: String,

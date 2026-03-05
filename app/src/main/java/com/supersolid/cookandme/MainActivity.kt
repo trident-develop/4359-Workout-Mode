@@ -1,4 +1,4 @@
-package com.landsharkgames.zenkoi2.andr
+package com.supersolid.cookandme
 
 import android.os.Bundle
 import android.view.MotionEvent
@@ -8,7 +8,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
-import com.landsharkgames.zenkoi2.andr.nav.WorkoutNavGraph
+import com.supersolid.cookandme.nav.WorkoutNavGraph
 
 class MainActivity : ComponentActivity() {
     private val windowController by lazy { WindowInsetsControllerCompat(window, window.decorView) }

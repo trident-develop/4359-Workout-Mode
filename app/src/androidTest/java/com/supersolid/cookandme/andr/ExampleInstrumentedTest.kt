@@ -1,4 +1,4 @@
-package com.landsharkgames.zenkoi2.andr
+package com.supersolid.cookandme.andr
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

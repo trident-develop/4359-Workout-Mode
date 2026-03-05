@@ -1,4 +1,4 @@
-package com.landsharkgames.zenkoi2.andr.nav
+package com.supersolid.cookandme.nav
 
 import androidx.compose.runtime.Composable
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -7,10 +7,10 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import com.landsharkgames.zenkoi2.andr.ui.screens.LoadingScreen
-import com.landsharkgames.zenkoi2.andr.ui.screens.MainScreen
-import com.landsharkgames.zenkoi2.andr.ui.screens.WorkoutDetailsScreen
-import com.landsharkgames.zenkoi2.andr.viewmodel.WorkoutViewModel
+import com.supersolid.cookandme.ui.screens.LoadingScreen
+import com.supersolid.cookandme.ui.screens.MainScreen
+import com.supersolid.cookandme.ui.screens.WorkoutDetailsScreen
+import com.supersolid.cookandme.viewmodel.WorkoutViewModel
 
 object Routes {
     const val LOADING = "loading"

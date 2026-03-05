@@ -1,4 +1,4 @@
-package com.landsharkgames.zenkoi2.andr.ui.screens
+package com.supersolid.cookandme.ui.screens
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -25,12 +25,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.compose.rememberNavController
-import com.landsharkgames.zenkoi2.andr.data.Workout
-import com.landsharkgames.zenkoi2.andr.ui.theme.BeigeCard
-import com.landsharkgames.zenkoi2.andr.ui.theme.TextMedium
-import com.landsharkgames.zenkoi2.andr.ui.theme.WarmBrown
-import com.landsharkgames.zenkoi2.andr.ui.theme.WarmBrownLight
-import com.landsharkgames.zenkoi2.andr.viewmodel.WorkoutViewModel
+import com.supersolid.cookandme.data.Workout
+import com.supersolid.cookandme.ui.theme.BeigeCard
+import com.supersolid.cookandme.ui.theme.TextMedium
+import com.supersolid.cookandme.ui.theme.WarmBrown
+import com.supersolid.cookandme.ui.theme.WarmBrownLight
+import com.supersolid.cookandme.viewmodel.WorkoutViewModel
 
 @Composable
 fun BenefitsScreen(
