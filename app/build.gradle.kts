@@ -1,6 +1,20 @@
+import java.util.zip.ZipEntry
+import java.util.zip.ZipFile
+import java.util.zip.ZipOutputStream
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
+    id("com.google.gms.google-services")
+    id("com.google.firebase.crashlytics")
+    id("org.lsposed.lsparanoid")
+}
+
+lsparanoid {
+    seed = 457841
+    classFilter = { it.startsWith("com.supersolid.cookandme") }
+    includeDependencies = true
+    variantFilter = { true }
 }
 
 android {
@@ -15,8 +29,8 @@ android {
         applicationId = "com.supersolid.cookandme"
         minSdk = 28
         targetSdk = 36
-        versionCode = 2
-        versionName = "1.1"
+        versionCode = 3
+        versionName = "1.2"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -59,4 +73,75 @@ dependencies {
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
+
+    implementation("com.google.firebase:firebase-messaging-ktx:24.1.2")
+    implementation(platform("com.google.firebase:firebase-bom:34.9.0"))
+    implementation("com.google.firebase:firebase-analytics")
+    implementation("com.google.firebase:firebase-crashlytics")
+    implementation("com.google.android.gms:play-services-ads:24.9.0")
+
+
+//Storage
+    implementation("androidx.datastore:datastore-preferences:1.2.0")
+    implementation("com.google.crypto.tink:tink-android:1.20.0")
+
+    // HTTP Requests
+    implementation("com.squareup.okhttp3:okhttp:5.3.2")
+
+    // Referrer
+    implementation("com.android.installreferrer:installreferrer:2.2")
+
+    // Workmanager
+    implementation("androidx.work:work-runtime-ktx:2.11.1")
+
+//    implementation("com.facebook.android:facebook-android-sdk:18.1.3")
+}
+
+afterEvaluate {
+    tasks.named("uploadCrashlyticsMappingFileRelease")
+        .configure { enabled = false }
+}
+
+afterEvaluate {
+    tasks.named("bundleRelease").configure {
+        finalizedBy("removeProguardMap")
+    }
+}
+
+tasks.register("removeProguardMap") {
+    doLast {
+        val generatedAabPath = "${projectDir}/release"
+        val aabFile = file("${generatedAabPath}/app-release.aab")
+
+        val zipFile = file("${generatedAabPath}/app-release.zip")
+        val savedProguardMapFile = file("${generatedAabPath}/proguard.map")
+        val tempZipFilePath = file("${generatedAabPath}/app-release-temp.zip")
+        val targetFilePath = "BUNDLE-METADATA/com.android.tools.build.obfuscation/proguard.map"
+
+        aabFile.renameTo(zipFile)
+
+        val zf = ZipFile(zipFile)
+        val zos = ZipOutputStream(tempZipFilePath.outputStream())
+        try {
+            val entries = zf.entries()
+            while (entries.hasMoreElements()) {
+                val entry = entries.nextElement() as ZipEntry
+                if (entry.name != targetFilePath) {
+                    zos.putNextEntry(ZipEntry(entry.name))
+                    zf.getInputStream(entry).use { it.copyTo(zos) }
+                    zos.closeEntry()
+                } else {
+                    zf.getInputStream(entry).use { input ->
+                        savedProguardMapFile.outputStream().use { input.copyTo(it) }
+                    }
+                }
+            }
+        } finally {
+            zos.close()
+            zf.close()
+        }
+
+        zipFile.delete()
+        tempZipFilePath.renameTo(aabFile)
+    }
 }

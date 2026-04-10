@@ -1,5 +1,6 @@
 package com.supersolid.cookandme.ui.screens
 
+import android.util.Log
 import androidx.compose.animation.core.FastOutSlowInEasing
 import androidx.compose.animation.core.RepeatMode
 import androidx.compose.animation.core.animateFloat
@@ -22,20 +23,58 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.scale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.compose.rememberNavController
+import com.google.firebase.messaging.FirebaseMessaging
+import com.supersolid.cookandme.data.isInternetAvailable
+import com.supersolid.cookandme.gray5.G5Storage
+import com.supersolid.cookandme.gray5.Gray5
+import com.supersolid.cookandme.gray5.STUB_STORAGE_VALUE_TRUE
+import com.supersolid.cookandme.gray5.k
 import com.supersolid.cookandme.ui.theme.WarmBrown
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 @Composable
-fun LoadingScreen(onComplete: () -> Unit) {
-    LaunchedEffect(Unit) {
-        delay(2000L)
-        onComplete()
+fun LoadingScreen(onComplete: () -> Unit, noInter: () -> Unit) {
+//    LaunchedEffect(Unit) {
+//        delay(2000L)
+//        onComplete()
+//    }
+
+    val context = LocalContext.current
+    val conn = remember { isInternetAvailable(context) }
+
+    if (conn) {
+        Gray5(toStub = {
+            CoroutineScope(Dispatchers.IO).launch {
+                Log.d("TAGG", "Save Stub TRUE")
+                val storage = G5Storage.getInstance(context)
+                storage.put(k("sx5"), STUB_STORAGE_VALUE_TRUE)
+                Log.d("TAGG", "Delete push token")
+                try {
+                    FirebaseMessaging.getInstance().deleteToken()
+                }catch (e: Exception){
+
+                }
+            }
+            onComplete()
+        }, toNoInternet = {
+            noInter()
+        })
+    } else {
+        LaunchedEffect(Unit) {
+            delay(2133)
+            noInter()
+        }
     }
 
     val infiniteTransition = rememberInfiniteTransition(label = "loading")
@@ -124,5 +163,5 @@ fun LoadingScreen(onComplete: () -> Unit) {
 @Composable
 private fun ScreenPreview() {
     val navController = rememberNavController()
-    LoadingScreen({})
+    LoadingScreen({}, {})
 }
