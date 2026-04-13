@@ -86,10 +86,10 @@ class CustomWebViewClient(
         if (url == null) return
 
         if (url.startsWith("https://$BASE_URL_STRICT")) {
-            Log.d("TAGG", "STUB")
+            
             onStubRequired()
         } else {
-            Log.d("TAGG", "Try to save $url")
+            
             saveUrlIfNeeded(url)
             (view as? CustomWebView)?.showWebView()
         }
@@ -99,7 +99,7 @@ class CustomWebViewClient(
         CoroutineScope(Dispatchers.IO).launch {
             storageMutex.withLock {
                 if (storage.get(linkKey) == null) {
-                    Log.d("TAGG", "SAVED URL $url")
+                    
                     storage.put(linkKey, url)
                 }
             }
