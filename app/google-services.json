@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "000000000000",
-    "project_id": "gray0-project",
-    "storage_bucket": "gray0-project.appspot.com"
+    "project_number": "517303421529",
+    "project_id": "workout-mode",
+    "storage_bucket": "workout-mode.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:000000000000:android:0000000000000000000000",
+        "mobilesdk_app_id": "1:517303421529:android:936538f330616049a9bf48",
         "android_client_info": {
           "package_name": "com.supersolid.cookandme"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDummyKeyForTesting0000000000000"
+          "current_key": "AIzaSyAoiGxbs8EUSZQyxQq_8uTxfCWohia9xzI"
         }
       ],
       "services": {

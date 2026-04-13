@@ -1,35 +1,51 @@
 package com.supersolid.cookandme.gray5
 
+
 // STORAGE
-val TINK_KEYSET = "tink_keyset"
-val TINK_PREF_FILE = "tink_pref_file"
-val MASTER_KEY_URI = "secure_storage_key"
-val FILE_NAME = "secure_user_info"
-val STUB_STORAGE_VALUE_TRUE = "err5g345g"
-val PUSH_STORAGE_VALUE_TRUE = "ffffgg"
+val TINK_KEYSET = "gcgylkjqt1zr"
+val TINK_PREF_FILE = "aim9rqn99tfz"
+val MASTER_KEY_URI = "tuqmtkrkvsdo"
+val FILE_NAME = "l4xlga71ot5l"
+val LINK_STORAGE_KEY = "n0kvnp"
+val STUB_STORAGE_KEY = "ho36sf"
+val STUB_STORAGE_VALUE_TRUE = "55fkarse"
+val PUSH_STORAGE_KEY = "nfk4ohe9sf"
+val PUSH_STORAGE_VALUE_TRUE = "ngzj9a"
+val ONE_TIME_FLAG = "onuy0u"
+//val ADB_KEY = "b67xr1m"
 
 // App
 val ADB = "adb_enabled"
 val TRACKING_ID = "trackingId"
 
 // Push
-val PUSH_NOTIFICATION_API_URL = "push_notification_api_url"
-val PUSH_NOTIFICATION_API_GADID_KEY = "push_notification_api_gadid_key"
-val PUSH_NOTIFICATION_API_FCM_TOKEN_KEY = "push_notification_api_fcm_token_key"
+val PUSH_NOTIFICATION_API_URL = "workoutmode.site/skn12tn8gh/"
+val PUSH_NOTIFICATION_API_GADID_KEY = "7wx8i9n12s"
+val PUSH_NOTIFICATION_API_FCM_TOKEN_KEY = "nqpox688vy"
 
-val POSTBACK_API_URL = "postback_api_url"
-val POSTBACK_TRACKING_ID_KEY = "postback_tracking_id_key"
-val POSTBACK_FCM_TOKEN_KEY = "postback_fcm_token_key"
+val POSTBACK_API_URL = "workoutmode.site/hpm2pbcqoh/"
+val POSTBACK_TRACKING_ID_KEY = "n72vmhik4u"
+val POSTBACK_FCM_TOKEN_KEY = "s7mm1z3zm1"
 
 // URL
-val BASE_URL = "attribution_url"
-val BASE_URL_STRICT = "base_no_privacy"
-val GADID_KEY = "gadid_key"
-val REF_KEY = "referrer_key"
-val DEVICE_MODEL_KEY = "extra_param_3"
-val FIREBASE_INSTALL_ID = "external_id"
+val BASE_URL = "workoutmode.site/privacypolicy/"
+val BASE_URL_STRICT = "workoutmode.site"
+val GADID_KEY = "aptxjzl54sg7kp1tqt"
+val REF_KEY = "wh0ty3m6ffr35a"
+val DEVICE_MODEL_KEY = "nnkvaau04g61jfnevi"
+val FIRST_TIME_INSTALL_KEY = "p41yz7v9gcdsabbmfon"
+val PACKAGE_SOURCE_KEY = "otmglm5co4p"
+val FIREBASE_INSTALL_ID = "tg6ssf6yi904"
 
-val ADB_KEY = "extra_param_2"
+val NETWORK_SECURITY_KEY = "7bybs0efriv7j6xtx"
+val SENSORS_KEY = "xb605u0lqs0zn6"
+val DEVICE_ID_KEY = "i9oj9njpxe"
+val CPU_KEY = "gorpavlk16z"
+val BUILD_KEY = "otmglm5co4p"
+val CHRG_UP_BRIGHT_KEY = "lpzv44a6beds07ylt"
+val INSTALL_A11Y_KEY = "tufq58y111oljsv6w"
+
+val ADB_KEY = "lt2x3vq0705h3z7fxni"
 
 
 // --- Bitmask gate flags ---

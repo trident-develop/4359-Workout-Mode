@@ -1,0 +1,30 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="72dp"
+    android:height="72dp"
+    android:viewportWidth="72"
+    android:viewportHeight="72">
+
+    <!--
+        Circle center (36,36) radius 20.
+        Arc starts at rightmost point (56,36), sweeps counter-clockwise ~270°,
+        ends at the bottom (36,56).  The 90° gap sits bottom-right, where the
+        arrowhead is placed.
+        large-arc-flag=1  sweep-flag=0 (CCW)
+    -->
+    <path
+        android:pathData="M56,36 A20,20 0 1 0 36,56"
+        android:strokeColor="#FF7C5C2E"
+        android:strokeWidth="6"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000" />
+
+    <!--
+        Arrowhead at the START of the arc (56,36).
+        CCW motion at the right side of the circle points straight UP.
+        Triangle: tip at (56,26), base corners at (49,38) and (63,38).
+    -->
+    <path
+        android:pathData="M56,46 L49,34 L63,34 Z"
+        android:fillColor="#FF7C5C2E" />
+
+</vector>

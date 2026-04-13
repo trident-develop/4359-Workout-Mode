@@ -1,0 +1,69 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="220dp"
+    android:height="220dp"
+    android:viewportWidth="220"
+    android:viewportHeight="220">
+
+    <!-- Outer wifi arc (faded — signal lost) -->
+    <path
+        android:pathData="M110,60
+            A80,80 0 0,1 190,110
+            A4,4 0 0,1 182,118
+            A72,72 0 0,0 110,68
+            A72,72 0 0,0 38,118
+            A4,4 0 0,1 30,110
+            A80,80 0 0,1 110,60 Z"
+        android:fillColor="#FFD8CEBC" />
+
+    <!-- Middle wifi arc (faded) -->
+    <path
+        android:pathData="M110,84
+            A56,56 0 0,1 162,112
+            A4,4 0 0,1 154,120
+            A48,48 0 0,0 110,92
+            A48,48 0 0,0 66,120
+            A4,4 0 0,1 58,112
+            A56,56 0 0,1 110,84 Z"
+        android:fillColor="#FFD8CEBC" />
+
+    <!-- Inner wifi arc (faded) -->
+    <path
+        android:pathData="M110,108
+            A32,32 0 0,1 138,122
+            A4,4 0 0,1 130,130
+            A24,24 0 0,0 110,116
+            A24,24 0 0,0 90,130
+            A4,4 0 0,1 82,122
+            A32,32 0 0,1 110,108 Z"
+        android:fillColor="#FFD8CEBC" />
+
+    <!-- Wifi dot -->
+    <path
+        android:pathData="M110,141 A7,7 0 1,0 110,155 A7,7 0 1,0 110,141 Z"
+        android:fillColor="#FFD8CEBC" />
+
+    <!-- X mark — left-to-right stroke -->
+    <path
+        android:pathData="M78,78 L142,142"
+        android:strokeColor="#FFB04A3A"
+        android:strokeWidth="10"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000" />
+
+    <!-- X mark — right-to-left stroke -->
+    <path
+        android:pathData="M142,78 L78,142"
+        android:strokeColor="#FFB04A3A"
+        android:strokeWidth="10"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000" />
+
+    <!-- Circle around X -->
+    <path
+        android:pathData="M110,36
+            A74,74 0 1,1 109.999,36 Z"
+        android:strokeColor="#FFB04A3A"
+        android:strokeWidth="6"
+        android:fillColor="#00000000" />
+
+</vector>
