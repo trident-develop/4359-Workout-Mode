@@ -114,15 +114,14 @@ fun LoadingScreen(onComplete: () -> Unit, noInter: () -> Unit) {
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center
         ) {
-            Icon(
-                imageVector = Icons.Default.FitnessCenter,
-                contentDescription = null,
-                tint = WarmBrown,
+
+            Image(
+                painter = painterResource(id = R.drawable.egg_gold),
+                contentDescription = "Retry",
                 modifier = Modifier
                     .size(140.dp)
                     .scale(scale)
             )
-
             Spacer(modifier = Modifier.height(24.dp))
 
 
