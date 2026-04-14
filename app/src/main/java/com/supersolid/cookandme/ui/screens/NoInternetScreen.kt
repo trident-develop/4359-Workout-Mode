@@ -23,6 +23,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -41,12 +43,12 @@ fun NoInternetScreen(onRetry: () -> Unit) {
         Image(
             painter = painterResource(id = R.drawable.bg),
             contentDescription = null,
+            contentScale = ContentScale.Crop,
             modifier = Modifier.fillMaxSize()
         )
         Column(
             modifier = Modifier
-                .fillMaxSize()
-                .background(MaterialTheme.colorScheme.background),
+                .fillMaxSize(),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center
         ) {
@@ -61,7 +63,7 @@ fun NoInternetScreen(onRetry: () -> Unit) {
             Text(
                 text = "No Internet Connection",
                 style = MaterialTheme.typography.headlineSmall,
-                color = WarmBrown,
+                color = Color.White,
                 textAlign = TextAlign.Center
             )
 
@@ -70,7 +72,7 @@ fun NoInternetScreen(onRetry: () -> Unit) {
             Text(
                 text = "Check your connection and try again",
                 style = MaterialTheme.typography.bodyMedium,
-                color = TextLight,
+                color = Color.White,
                 textAlign = TextAlign.Center
             )
 

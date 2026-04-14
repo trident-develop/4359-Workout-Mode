@@ -33,10 +33,13 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.scale
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.navigation.compose.rememberNavController
 import com.google.firebase.messaging.FirebaseMessaging
 import com.supersolid.cookandme.R
@@ -102,6 +105,7 @@ fun LoadingScreen(onComplete: () -> Unit, noInter: () -> Unit) {
         Image(
             painter = painterResource(id = R.drawable.bg),
             contentDescription = null,
+            contentScale = ContentScale.Crop,
             modifier = Modifier.fillMaxSize()
         )
         Column(
@@ -121,18 +125,12 @@ fun LoadingScreen(onComplete: () -> Unit, noInter: () -> Unit) {
 
             Spacer(modifier = Modifier.height(24.dp))
 
-            Text(
-                text = "Workout Coach",
-                style = MaterialTheme.typography.headlineMedium,
-                color = MaterialTheme.colorScheme.onBackground
-            )
-
-            Spacer(modifier = Modifier.height(8.dp))
 
             Text(
-                text = "Your personal fitness companion",
+                text = "Loading...",
                 style = MaterialTheme.typography.bodyMedium,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
+                fontSize = 24.sp,
+                color = Color.White
             )
 
             Spacer(modifier = Modifier.height(40.dp))
